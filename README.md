@@ -1,1 +1,1 @@
-# ether-node
+# Basic setup of Strong Node

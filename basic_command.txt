@@ -1,0 +1,31 @@
+# htop install
+add-apt-repository universe
+apt-get update
+apt-get install htop
+
+# create directory path where you want to configure
+mkdir test
+eg: test is your directory where you want to install then your {dir-path} = test
+
+# package install
+wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.9.22-c71a7e26.tar.gz
+tar xf geth-linux-amd64-1.9.22-c71a7e26.tar.gz
+cd geth-linux-amd64-1.9.22-c71a7e26
+sudo mv geth /usr/bin/
+
+#run app in tmux
+geth --datadir {dir-path} --syncmode "fast" --cache=1024
+#check status
+geth --datadir {dir-path} attach
+->web3.eth.syncing
+
+#save config in file config.toml
+geth --datadir {dir-path} --rpc --rpcaddr 0.0.0.0 --rpccorsdomain '*' --rpcapi personal,admin,eth,net,web3,txpool,debug --ws --wsaddr 0.0.0.0 --wsorigins '*' --wsapi personal,admin,eth,net,web3,txpool,debug --nousb dumpconfig > config.toml
+OR
+geth --syncmode fast --cache=2048 --maxpeers=128 --datadir {dir-path} --http --http.addr 0.0.0.0 --http.corsdomain '*' --http.api personal,admin,eth,net,web3,txpool,debug --ws --ws.addr 0.0.0.0 --ws.origins '*' --ws.api personal,admin,eth,net,web3,txpool,debug --nousb dumpconfig > config.toml
+
+#run app with config
+geth --datadir {dir-path} --config config.toml
+
+#run with service
+systemctl start geth.service

@@ -1,0 +1,11 @@
+[Unit]
+Description=Ethereum go client
+[Service]
+User=root
+Type=simple
+WorkingDirectory={dir-path}
+ExecStart=/bin/bash {dir-path}/startgeth.sh
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=default.target

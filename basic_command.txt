@@ -29,3 +29,13 @@ geth --datadir {dir-path} --config config.toml
 
 #run with service
 systemctl start geth.service
+
+#geth command line help
+https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options
+
+#Ethereum Dashboard and to monitor your Ethereum Network Status
+https://medium.com/coinmonks/how-to-build-ethereum-dashboard-and-to-monitor-your-ethereum-network-status-9f1941beac08
+
+env WS_SECRET=111111 node app.js
+
+

@@ -27,4 +27,5 @@ $ geth --syncmode "fast" --cache 4096 --maxpeers 200 --datadir /home/ubuntu/node
 # Command to start geth services.
 
 $ sudo systemctl start geth1.service
+
 $ sudo systemctl status geth2.service

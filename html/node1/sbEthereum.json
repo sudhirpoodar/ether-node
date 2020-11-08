@@ -1,0 +1,16 @@
+{
+"address": "0x65587ce30e145EDa20a882d712A70179046DC9Fc",
+"name": "BCT247A1 Strong Node",
+"logo": "https://strong.caretaker247.com/bct247.png",
+"description": "BCT247A1 Strong SignalNode",
+"website_url": "https://stronga1.caretaker247.com",
+"rpc_endpoint": "https://strong.caretaker247.com/rpca1",
+"ws_endpoint": "http://stronga.caretaker247.com:8546",
+"location": "US",
+"email": "it@caretaker247.com",
+"social": {
+
+"telegram": "https://t.me/ct247_team"
+}
+
+}
